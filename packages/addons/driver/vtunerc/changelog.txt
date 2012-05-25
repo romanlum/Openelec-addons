@@ -1,4 +1,0 @@
-2.0.1
-- change to download binary on the fly
-2.0.0
-- initial version of vtuner client driver
