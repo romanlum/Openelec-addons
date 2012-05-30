@@ -1,7 +1,6 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2011 Anthony Nash (nash.ant@gmail.com)
+#      Copyright (C) 2009-2011 Stephan Raue (stephan@openelec.tv)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -15,24 +14,22 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with OpenELEC.tv; see the file COPYING.  If not, write to
-#  the Free Software Foundation, 51 Franklin Street, Suite 500, Boston, MA 02110, USA.
+#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="SickBeard-german"
-PKG_VERSION="614fd69"
-PKG_REV="1"
-PKG_ARCH="any"
-PKG_LICENSE="OSS"
-PKG_SITE="https://github.com/cytec/Sick-Beard"
-PKG_URL="https://nodeload.github.com/cytec/Sick-Beard/zipball/$PKG_VERSION"
-PKG_DEPENDS="Python SABnzbd Cheetah"
-PKG_BUILD_DEPENDS="toolchain Python Cheetah"
-PKG_PRIORITY="optional"
-PKG_SECTION="service/downloadmanager"
-PKG_SHORTDESC="SickBeard: automated TV show downloading."
-PKG_LONGDESC="SickBeard: automated TV show downloading."
+import os
+import sys
+import xbmcaddon
+import xbmcgui
 
-PKG_IS_ADDON="no"
+dialog = xbmcgui.Dialog()
+fn = dialog.browse(1, 'mupen64plus', 'files')
 
-PKG_AUTORECONF="no"
+__settings__   = xbmcaddon.Addon(id='emulators.mupen64plus')
+__cwd__        = __settings__.getAddonInfo('path')
+__path__       = xbmc.translatePath( os.path.join( __cwd__, 'bin', "mupen64plus.sh") )
+
+os.system( "chmod a+rx " + __path__ )
+os.system( "%s '%s' "%(__path__,fn.replace("'", "'\\''")) )
+

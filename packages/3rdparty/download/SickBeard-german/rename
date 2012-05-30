@@ -23,5 +23,5 @@
 . config/options $1
 
 unzip $SOURCES/$PKG_NAME/$PKG_VERSION -d $BUILD
-mv $BUILD/cytec-SickBeard-$PKG_VERSION $BUILD/$PKG_NAME-$PKG_VERSION
+mv $BUILD/cytec-Sick-Beard-$PKG_VERSION $BUILD/$PKG_NAME-$PKG_VERSION
 

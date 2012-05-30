@@ -1,0 +1,10 @@
+2.0.6
+- fixes
+2.0.5
+- update to 1.99.5
+1.90.4
+- small fixes, add rom file selector dialog
+1.90.3
+- fixed all installation bugs
+1.90.0
+- prepare for OpenELEC-1.90 release

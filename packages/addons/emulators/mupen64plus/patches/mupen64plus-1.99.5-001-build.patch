@@ -1,0 +1,126 @@
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-audio-sdl/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-audio-sdl/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-audio-sdl/projects/unix/Makefile	2012-05-30 15:53:07.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-audio-sdl/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -22,7 +22,7 @@
+ # Makefile for SDL Audio plugin in Mupen64plus
+ 
+ # detect operation system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -65,7 +65,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ NO_ASM ?= 1
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-core/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-core/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-core/projects/unix/Makefile	2012-05-30 15:53:34.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-core/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -22,7 +22,7 @@
+ # Makefile for Mupen64Plus Core
+ 
+ # detect operating system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -52,7 +52,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+   CPU := X86
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-input-sdl/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-input-sdl/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-input-sdl/projects/unix/Makefile	2012-05-30 15:53:51.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-input-sdl/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -21,7 +21,7 @@
+ # Makefile for SDL Input plugin in Mupen64plus
+ 
+ # detect operating system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -64,7 +64,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ NO_ASM ?= 1
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-rsp-hle/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-rsp-hle/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-rsp-hle/projects/unix/Makefile	2012-05-30 15:54:20.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-rsp-hle/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -22,7 +22,7 @@
+ # Makefile for Mupen64 HLE RSP plugin in Mupen64plus.
+ 
+ # detect operating system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -65,7 +65,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ NO_ASM ?= 1
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-ui-console/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-ui-console/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-ui-console/projects/unix/Makefile	2012-05-30 15:54:34.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-ui-console/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -21,7 +21,7 @@
+ # Makefile for Mupen64plus-ui-console
+ 
+ # detect operation system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -50,7 +50,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ NO_ASM ?= 1
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+diff -rupN mupen64plus-1.99.5-orig/source/mupen64plus-video-rice/projects/unix/Makefile mupen64plus-1.99.5-new/source/mupen64plus-video-rice/projects/unix/Makefile
+--- mupen64plus-1.99.5-orig/source/mupen64plus-video-rice/projects/unix/Makefile	2012-05-30 15:54:49.000000000 +0200
++++ mupen64plus-1.99.5-new/source/mupen64plus-video-rice/projects/unix/Makefile	2012-05-30 15:52:17.000000000 +0200
+@@ -22,7 +22,7 @@
+ # Makefile for RiceVideo plugin in Mupen64Plus
+ 
+ # detect operating system
+-UNAME = $(shell uname -s)
++UNAME = Linux
+ OS := NONE
+ ifeq ("$(UNAME)","Linux")
+   OS = LINUX
+@@ -65,7 +65,7 @@ ifeq ("$(OS)","NONE")
+ endif
+ 
+ # detect system architecture
+-HOST_CPU ?= $(shell uname -m)
++HOST_CPU ?= $(ARCH)
+ CPU := NONE
+ ifneq ("$(filter x86_64 amd64,$(HOST_CPU))","")
+   CPU := X86

@@ -30,7 +30,7 @@ from configobj import ConfigObj
 from xml.dom.minidom import parseString
 import logging
 
-logging.basicConfig(filename='/var/log/sabnzbd-suite.log',
+logging.basicConfig(filename='/var/log/sabnzbd-suite-german.log',
                     filemode='w',
                     format='%(asctime)s SABnzbd-Suite: %(message)s',
                     level=logging.WARNING)
@@ -60,8 +60,8 @@ def loadWebInterface(url,user,pwd):
 # ------------------------------------------------------
 
 # addon
-pAddon                = os.path.expanduser('~/.xbmc/addons/service.downloadmanager.SABnzbd-Suite')
-pAddonHome            = os.path.expanduser('~/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite')
+pAddon                = os.path.expanduser('~/.xbmc/addons/service.downloadmanager.SABnzbd-Suite-german')
+pAddonHome            = os.path.expanduser('~/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite-german')
 
 # settings
 pDefaultSuiteSettings = os.path.join(pAddon, 'settings-default.xml')
@@ -95,7 +95,7 @@ headphones            = ['python', os.path.join(pAddon, 'Headphones/Headphones.p
 
 # Other stuff
 sabNzbdHost           = '127.0.0.1:8081'
-addonId               = 'service.downloadmanager.SABnzbd-Suite'
+addonId               = 'service.downloadmanager.SABnzbd-Suite-german'
 
 # create directories and settings on first launch
 # -----------------------------------------------
