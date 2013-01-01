@@ -2,7 +2,7 @@
 
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2011 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -16,19 +16,13 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with OpenELEC.tv; see the file COPYING.  If not, write to
-#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+#  the Free Software Foundation, 51 Franklin Street, Suite 500, Boston, MA 02110, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
 . config/options $1
 
-BINDIR=$ADDON_BUILD/$PKG_ADDON_ID/bin
-mkdir -p $ADDON_BUILD/$PKG_ADDON_ID
-mkdir -p $BINDIR
+APIDIR=$SYSROOT_PREFIX/../include/mupen64plus/api
+cd $PKG_BUILD/projects/unix
 
-cp $BUILD/mupen64plus-ui-console-*/projects/unix/mupen64plus $BINDIR/
-cp $BUILD/mupen64plus-input-sdl-*/projects/unix/mupen64plus-input-sdl* $BINDIR/
-cp $BUILD/mupen64plus-audio-sdl-*/projects/unix/mupen64plus-audio-sdl* $BINDIR/
-cp $BUILD/mupen64plus-rsp-hle-*/projects/unix/mupen64plus-rsp-hle* $BINDIR/
-cp $BUILD/mupen64plus-video-rice-*/projects/unix/mupen64plus-video-rice* $BINDIR/
-cp $BUILD/mupen64plus-core-*/projects/unix/libmupen64plus.so* $BINDIR/
+UNAME=linux APIDIR=$APIDIR HOST_CPU=$TARGET_SUBARCH CROSS_COMPILE=$TARGET_SUBARCH-openelec-linux-gnu- make all

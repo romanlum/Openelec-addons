@@ -1,6 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2011 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
+#      Copyright (C) 2011 Anthony Nash (nash.ant@gmail.com)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -14,23 +15,25 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with OpenELEC.tv; see the file COPYING.  If not, write to
-#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+#  the Free Software Foundation, 51 Franklin Street, Suite 500, Boston, MA 02110, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
 PKG_NAME="mupen64plus"
-PKG_VERSION="1.99.5"
-PKG_REV="6"
+PKG_VERSION="1"
+PKG_REV="5"
 PKG_ARCH="any"
-PKG_LICENSE="LGPL"
-PKG_SITE="http://mupen64plus.googlecode.com"
-PKG_URL="http://mupen64plus.googlecode.com/files/mupen64plus-bundle-src-1.99.5.tar.gz"
-PKG_DEPENDS="glib freetype"
-PKG_BUILD_DEPENDS="toolchain glib freetype libpng SDL SDL_ttf zlib"
+PKG_LICENSE="OSS"
+PKG_SITE="https://bitbucket.org/richard42"
+PKG_URL=""
+PKG_DEPENDS=""
+PKG_BUILD_DEPENDS="mupen64plus-core mupen64plus-rsp-hle mupen64plus-video-rice mupen64plus-ui-console mupen64plus-audio-sdl mupen64plus-input-sdl"
 PKG_PRIORITY="optional"
 PKG_SECTION="emulators"
-PKG_SHORTDESC="Nintendo 64 emulator"
-PKG_LONGDESC="N64"
-PKG_IS_ADDON="yes"
+PKG_SHORTDESC="N64 emulator based on mupen64plus"
+PKG_LONGDESC="N64 emulator based on mupen64plus"
 PKG_ADDON_TYPE="xbmc.python.script"
+
+PKG_IS_ADDON="yes"
+
 PKG_AUTORECONF="no"

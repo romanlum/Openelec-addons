@@ -71,6 +71,27 @@ echo "Using openelec directory $OPENELEC"
 echo "Copying addon packages"
 cp -rp packages "$OPENELEC/" || die "copying packages"
 
+. /$OPENELEC/config/version
+
+echo "Generating url files for openelec version $OPENELEC_VERSION"
+OLDDIR=`pwd`
+
+cd sources
+for dir in $(find . -type d)
+do
+	cd $OLDDIR/sources/$dir
+	for file in *.xz
+	do
+		  echo "http://sources.openelec.tv/$OPENELEC_VERSION/$file" > $file.url
+	done;
+done;
+
+cd $OLDDIR
+
+echo "Copying source packages"
+cp -rp sources "$OPENELEC/" || die "copying sources"
+
+
 doit() {
   cd "$OPENELEC" || die "cannot change directory to openelec dir $OPENELEC"
   PROJECT=$1

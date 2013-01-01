@@ -24,9 +24,9 @@ import xbmcaddon
 import xbmcgui
 
 dialog = xbmcgui.Dialog()
-fn = dialog.browse(1, 'retroarch', 'files')
+fn = dialog.browse(1, 'RetroArch', 'files')
 
-__settings__   = xbmcaddon.Addon(id='emulators.retroarch')
+__settings__   = xbmcaddon.Addon(id='emulators.RetroArch')
 __cwd__        = __settings__.getAddonInfo('path')
 __path__       = xbmc.translatePath( os.path.join( __cwd__, 'bin', "retroarch.sh") )
 
