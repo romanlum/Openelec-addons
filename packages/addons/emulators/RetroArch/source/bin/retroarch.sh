@@ -18,7 +18,7 @@ chmod a+rx "$ADDON_DIR/bin/retroarch"
 sleep 2
 killall -STOP xbmc.bin
 
-while [ $(pidof ssnes) ];do
+while [ $(pidof retroarch) ];do
     usleep 200000
 done;
 killall -CONT xbmc.bin
