@@ -23,5 +23,5 @@
 . config/options $1
 cd $PKG_BUILD
 
-./configure --disable-libpng 
+CROSS_COMPILE=true ./configure --disable-libpng 
 make

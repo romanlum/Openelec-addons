@@ -24,7 +24,13 @@
 
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
-  cp $SYSROOT_PREFIX/usr/lib/libCg* $ADDON_BUILD/$PKG_ADDON_ID/bin
   cp -P $PKG_BUILD/tools/retroarch-joyconfig $ADDON_BUILD/$PKG_ADDON_ID/bin
   cp -P $PKG_BUILD/retroarch $ADDON_BUILD/$PKG_ADDON_ID/bin
-  cp -P $SYSROOT_PREFIX/usr/lib/libretro.so $ADDON_BUILD/$PKG_ADDON_ID/bin
+
+  cp $BUILD/snes9x-next-*/libretro.so $ADDON_BUILD/$PKG_ADDON_ID/bin/
+
+  if [ -f /home/roman/Development/OpenELEC.tv/build.OpenELEC-ION.x86_64-devel/toolchain/x86_64-openelec-linux-gnu/sysroot/usr/lib/libCg* ]
+  then 
+      cp $SYSROOT_PREFIX/usr/lib/libCg* $ADDON_BUILD/$PKG_ADDON_ID/bin
+  fi
+
