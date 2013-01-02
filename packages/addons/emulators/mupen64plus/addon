@@ -23,8 +23,11 @@
 . config/options $1
 
 BINDIR=$ADDON_BUILD/$PKG_ADDON_ID/bin
+DATADIR=$ADDON_BUILD/$PKG_ADDON_ID/data
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID
 mkdir -p $BINDIR
+mkdir -p $DATADIR
+
 
 cp $BUILD/mupen64plus-ui-console-*/projects/unix/mupen64plus $BINDIR/
 cp $BUILD/mupen64plus-input-sdl-*/projects/unix/mupen64plus-input-sdl* $BINDIR/
@@ -32,3 +35,7 @@ cp $BUILD/mupen64plus-audio-sdl-*/projects/unix/mupen64plus-audio-sdl* $BINDIR/
 cp $BUILD/mupen64plus-rsp-hle-*/projects/unix/mupen64plus-rsp-hle* $BINDIR/
 cp $BUILD/mupen64plus-video-rice-*/projects/unix/mupen64plus-video-rice* $BINDIR/
 cp $BUILD/mupen64plus-core-*/projects/unix/libmupen64plus.so* $BINDIR/
+
+cp $BUILD/mupen64plus-input-sdl-*/data/* $DATADIR
+cp $BUILD/mupen64plus-video-rice-*/data/* $DATADIR
+cp $BUILD/mupen64plus-core-*/data/* $DATADIR

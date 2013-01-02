@@ -21,7 +21,7 @@
 
 PKG_NAME="mupen64plus"
 PKG_VERSION="1"
-PKG_REV="5"
+PKG_REV="8"
 PKG_ARCH="any"
 PKG_LICENSE="OSS"
 PKG_SITE="https://bitbucket.org/richard42"

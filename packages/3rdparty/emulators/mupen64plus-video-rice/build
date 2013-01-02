@@ -25,4 +25,4 @@
 APIDIR=$SYSROOT_PREFIX/../include/mupen64plus/api
 cd $PKG_BUILD/projects/unix
 
-UNAME=linux APIDIR=$APIDIR HOST_CPU=$TARGET_SUBARCH CROSS_COMPILE=$TARGET_SUBARCH-openelec-linux-gnu- make all
+LDLIBS=-lz UNAME=linux APIDIR=$APIDIR HOST_CPU=$TARGET_SUBARCH CROSS_COMPILE=$TARGET_SUBARCH-openelec-linux-gnu- make all

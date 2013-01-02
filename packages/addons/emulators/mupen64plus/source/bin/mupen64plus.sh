@@ -14,7 +14,7 @@ fi
 export LD_LIBRARY_PATH=$ADDON_DIR/bin/
 cd $ADDON_DIR/bin
 chmod a+rx mupen64plus
-./mupen64plus --datadi"$ADDON_HOME" --configdir "$ADDON_HOME" --resolution `xrandr | grep '^ .*\*'|awk '{print $1}'` --fullscreen "$@" >>/tmp/mupen64plus.log 2>&1 &
+./mupen64plus --datadir "$ADDON_HOME" --configdir "$ADDON_HOME" --resolution `xrandr | grep '^ .*\*'|awk '{print $1}'` --fullscreen "$@" >>/tmp/mupen64plus.log 2>&1 &
 
 
 sleep 7
