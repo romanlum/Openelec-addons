@@ -1,0 +1,49 @@
+#!/bin/sh
+################################################################################
+#      This file is part of OpenELEC - http://www.openelec.tv
+#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
+#
+#  This Program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2, or (at your option)
+#  any later version.
+#
+#  This Program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with OpenELEC.tv; see the file COPYING.  If not, write to
+#  the Free Software Foundation, 51 Franklin Street, Suite 500, Boston, MA 02110, USA.
+#  http://www.gnu.org/copyleft/gpl.html
+################################################################################
+
+GIT_PATH="https://github.com/libretro/snes9x-next"
+PACKAGE="snes9x-next"
+
+echo "getting sources..."
+  if [ ! -d $PACKAGE ]; then
+    git clone $GIT_PATH -b master $PACKAGE.git
+  fi
+
+  cd $PACKAGE.git
+    git pull
+    GIT_REV=`git log -n1 --format=%h`
+  cd ..
+
+echo "copying sources..."
+  rm -rf $PACKAGE-$GIT_REV
+  cp -R $PACKAGE.git $PACKAGE-$GIT_REV
+
+echo "cleaning sources..."
+  rm -rf $PACKAGE-$GIT_REV/.git
+
+echo "packing sources..."
+  tar cvJf $PACKAGE-$GIT_REV.tar.xz $PACKAGE-$GIT_REV
+
+echo "remove temporary sourcedir..."
+  rm -rf $PACKAGE-$GIT_REV
+echo "generate md5"
+echo `md5sum $PACKAGE-$GIT_REV.tar.xz` > $PACKAGE-$GIT_REV.tar.xz.md5
+echo "" > $PACKAGE-$GIT_REV.tar.xz.url
