@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="emulators.mupen64plus"
+       name="mupen64plus"
+       version="3.0.8"
+       provider-name="openelec.tv">
+  <requires>
+    <import addon="os.openelec.tv" version="3.0"/>
+    <import addon="xbmc.python" version="2.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script"
+             library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>N64 emulator based on mupen64plus</summary>
+    <description>
+N64 emulator based on mupen64plus
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
