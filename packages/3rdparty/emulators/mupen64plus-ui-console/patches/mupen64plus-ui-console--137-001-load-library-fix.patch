@@ -1,0 +1,12 @@
+diff -rupN mupen64plus-ui-console-137.orig/src/osal_dynamiclib_unix.c mupen64plus-ui-console-137/src/osal_dynamiclib_unix.c
+--- mupen64plus-ui-console-137.orig/src/osal_dynamiclib_unix.c	2013-01-03 11:20:27.168112687 -0500
++++ mupen64plus-ui-console-137/src/osal_dynamiclib_unix.c	2013-01-03 11:21:01.686670465 -0500
+@@ -33,7 +33,7 @@ m64p_error osal_dynlib_open(m64p_dynlib_
+     if (pLibHandle == NULL || pccLibraryPath == NULL)
+         return M64ERR_INPUT_ASSERT;
+ 
+-    *pLibHandle = dlopen(pccLibraryPath, RTLD_NOW);
++    *pLibHandle = dlopen(pccLibraryPath, RTLD_LAZY);
+ 
+     if (*pLibHandle == NULL)
+     {
