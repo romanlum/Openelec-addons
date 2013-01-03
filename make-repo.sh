@@ -31,7 +31,7 @@ PARAMS="$@"
 # ARCH and PROJECT environment variables specify the archs and projects to build
 if [ "x$ARCH" = "x" ]; then
   #default projects and archs that addons are built for if not specified via env
-  TARGETS="ION i386 ION x86_64"
+  TARGETS="ION i386 ION x86_64 Fusion x86_64"
 else
   [ "x$PROJECT" = "x" ] && die "specify both ARCH and PROJECT"
   TARGETS="$PROJECT $ARCH"
