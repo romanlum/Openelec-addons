@@ -1,0 +1,10 @@
+3.0.5
+- prepare for OpenELEC-3.0.0 release
+
+3.0.6
+3.0.7
+3.0.8
+- bugfixing
+
+3.0.9
+- fix x64 version
