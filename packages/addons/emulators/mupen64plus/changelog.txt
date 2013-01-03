@@ -3,5 +3,11 @@
 
 3.0.6
 3.0.7
-3.8
+3.0.8
 - bugfixing
+
+3.0.9
+- fix x64 version
+
+3.0.10
+- fix libpng
