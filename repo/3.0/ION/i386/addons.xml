@@ -2,7 +2,7 @@
 <addons>
 <addon id="emulators.mupen64plus"
        name="mupen64plus"
-       version="3.0.11"
+       version="3.0.10"
        provider-name="openelec.tv">
   <requires>
     <import addon="os.openelec.tv" version="3.0"/>
@@ -24,7 +24,7 @@ N64 emulator based on mupen64plus
 
 <addon id="emulators.RetroArch"
        name="RetroArch"
-       version="3.0.4"
+       version="3.0.5"
        provider-name="openelec.tv">
   <requires>
     <import addon="os.openelec.tv" version="3.0"/>
