@@ -2,7 +2,7 @@
 <addons>
 <addon id="emulators.mupen64plus"
        name="mupen64plus"
-       version="3.0.9"
+       version="3.0.10"
        provider-name="openelec.tv">
   <requires>
     <import addon="os.openelec.tv" version="3.0"/>
