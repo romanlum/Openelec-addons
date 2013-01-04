@@ -27,15 +27,8 @@ PKG_CONFIG_CROSS="$ROOT/$TOOLCHAIN/bin/$TARGET_SUBARCH-openelec-linux-gnu-pkg-co
 SDL_CONFIG="$ROOT/$TOOLCHAIN/bin/sdl-config"
 SDL_CONFIG_CROSS="$ROOT/$TOOLCHAIN/bin/$TARGET_SUBARCH-openelec-linux-gnu-sdl-config"
 
-if [ ! -f $PKG_CONFIG_CROSS ]
-then
-	ln -s $PKG_CONFIG $PKG_CONFIG_CROSS
-fi
-
-if [ ! -f $SDL_CONFIG_CROSS ]
-then
-	ln -s $SDL_CONFIG $SDL_CONFIG_CROSS
-fi
+[ ! -e $PKG_CONFIG_CROSS ] && ln -s $PKG_CONFIG $PKG_CONFIG_CROSS
+[ ! -e $SDL_CONFIG_CROSS ] && ln -s $SDL_CONFIG $SDL_CONFIG_CROSS
 
 cd $PKG_BUILD/projects/unix
 
