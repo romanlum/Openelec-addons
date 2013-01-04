@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <addon id="repo.romnic" name="romnic Openelec repo 64 BIT" version="1.0.0" provider-name="RomNic">
+    <extension point="xbmc.addon.repository" name="Repo Openelec Community">
+    <info>https://raw.github.com/romanlum/Openelec-addons/master/repo/3.0/Fusion/x86_64/addons.xml</info>
+    <checksum>https://raw.github.com/romanlum/Openelec-addons/master/repo/3.0/Fusion/x86_64/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.github.com/romanlum/Openelec-addons/master/repo/3.0/Fusion/x86_64/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+		<summary lang="en">OpenELEC Community Repository for Fusion 64Bit, by RomNic</summary>
+		<summary lang="de">OpenELEC Community Repository for Fusion 64Bit, by RomNic</summary>
+		<description>OpenELEC Community addons</description>
+		<disclaimer>Es wird nicht fuer den Inhalt gehaftet</disclaimer>
+		<platform>linux</platform>
+    </extension>
+  </addon>
