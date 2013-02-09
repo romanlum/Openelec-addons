@@ -1,6 +1,6 @@
 diff -rupN SickBeard-German-004cb40.orig/sickbeard/germandates.py SickBeard-German-004cb40/sickbeard/germandates.py
 --- SickBeard-German-004cb40.orig/sickbeard/germandates.py	2013-02-09 17:18:49.440660093 -0500
-+++ SickBeard-German-004cb40/sickbeard/germandates.py	2013-02-09 17:20:14.982601517 -0500
++++ SickBeard-German-004cb40/sickbeard/germandates.py	2013-02-09 17:41:45.450828872 -0500
 @@ -8,12 +8,12 @@ from sqlalchemy.orm import sessionmaker,
  from sickbeard import logger
  from datetime import datetime, timedelta
