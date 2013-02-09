@@ -33,7 +33,7 @@ from configobj import ConfigObj
 __scriptname__ = "SABnzbd Suite"
 __author__     = "OpenELEC"
 __url__        = "http://www.openelec.tv"
-__settings__   = xbmcaddon.Addon(id='service.downloadmanager.SABnzbd-Suite')
+__settings__   = xbmcaddon.Addon(id='service.downloadmanager.SABnzbd-Suite-German')
 __cwd__        = __settings__.getAddonInfo('path')
 __start__      = xbmc.translatePath( os.path.join( __cwd__, 'bin', "SABnzbd-Suite.py") )
 __stop__       = xbmc.translatePath( os.path.join( __cwd__, 'bin', "SABnzbd-Suite.stop") )
@@ -54,7 +54,7 @@ sabNzbdLaunch = (__settings__.getSetting('SABNZBD_LAUNCH').lower() == 'true')
 if sabNzbdLaunch:
     # SABnzbd addresses and api key
     sabNzbdAddress    = '127.0.0.1:8081'
-    sabNzbdConfigFile = '/storage/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite/sabnzbd.ini'
+    sabNzbdConfigFile = '/storage/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite-German/sabnzbd.ini'
     sabConfiguration  = ConfigObj(sabNzbdConfigFile)
     sabNzbdApiKey     = sabConfiguration['misc']['api_key']
     sabNzbdUser       = sabConfiguration['misc']['username']

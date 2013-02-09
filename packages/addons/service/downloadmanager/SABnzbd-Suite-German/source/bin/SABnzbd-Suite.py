@@ -62,8 +62,8 @@ def loadWebInterface(url,user,pwd):
 # ------------------------------------------------------
 
 # addon
-pAddon                = os.path.expanduser('~/.xbmc/addons/service.downloadmanager.SABnzbd-Suite')
-pAddonHome            = os.path.expanduser('~/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite')
+pAddon                = os.path.expanduser('~/.xbmc/addons/service.downloadmanager.SABnzbd-Suite-German')
+pAddonHome            = os.path.expanduser('~/.xbmc/userdata/addon_data/service.downloadmanager.SABnzbd-Suite-German')
 
 # settings
 pDefaultSuiteSettings = os.path.join(pAddon, 'settings-default.xml')
@@ -101,7 +101,7 @@ headphones            = ['python', os.path.join(pAddon, 'Headphones/Headphones.p
 
 # Other stuff
 sabNzbdHost           = '127.0.0.1:8081'
-addonId               = 'service.downloadmanager.SABnzbd-Suite'
+addonId               = 'service.downloadmanager.SABnzbd-Suite-German'
 
 # create directories and settings on first launch
 # -----------------------------------------------

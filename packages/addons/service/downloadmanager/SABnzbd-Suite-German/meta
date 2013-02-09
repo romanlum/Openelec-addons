@@ -18,7 +18,7 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="SABnzbd-Suite"
+PKG_NAME="SABnzbd-Suite-German"
 PKG_VERSION="3.0"
 PKG_REV="2"
 PKG_ARCH="any"
