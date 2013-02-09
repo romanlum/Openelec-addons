@@ -1,6 +1,0 @@
-2.0.1
-- fixed paths
-
-2.0.0
-- Initial version of SABnzbd-Suite-german
-

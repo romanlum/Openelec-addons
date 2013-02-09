@@ -18,19 +18,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="SABnzbd-Suite-german"
-PKG_VERSION="2.0"
+PKG_NAME="SABnzbd-Suite"
+PKG_VERSION="3.0"
 PKG_REV="2"
 PKG_ARCH="any"
 PKG_LICENSE="OSS"
 PKG_SITE="http://www.openelec.tv"
 PKG_URL=""
 PKG_DEPENDS="Python"
-PKG_BUILD_DEPENDS="toolchain Python SABnzbd SickBeard-german CouchPotato Headphones"
+PKG_BUILD_DEPENDS="toolchain Python SABnzbd SickBeard-German CouchPotato Headphones CouchPotatoServer"
 PKG_PRIORITY="optional"
 PKG_SECTION="service/downloadmanager"
-PKG_SHORTDESC="SABnzbd-Suite-german is a Metapackage which combines SABnzbd, SickBeard, Couchpotato and Headphones in one Addon"
-PKG_LONGDESC="SABnzbd-Suite-german makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add a .nzb file. SABnzbd+ takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction. This addons uses the german version of Sickbeard"
+PKG_SHORTDESC="SABnzbd-Suite is a Metapackage which combines SABnzbd, SickBeard, Couchpotato and Headphones in one Addon"
+PKG_LONGDESC="SABnzbd-Suite makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add a .nzb file. SABnzbd+ takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction."
 
 PKG_IS_ADDON="yes"
 PKG_ADDON_TYPE="xbmc.service"

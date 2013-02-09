@@ -39,10 +39,13 @@ mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/SABnzbd
   cp -PR $BUILD/SABnzbd-*/* $ADDON_BUILD/$PKG_ADDON_ID/SABnzbd
 
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/SickBeard
-  cp -PR $BUILD/SickBeard-german*/* $ADDON_BUILD/$PKG_ADDON_ID/SickBeard
+  cp -PR $BUILD/SickBeard-German*/* $ADDON_BUILD/$PKG_ADDON_ID/SickBeard
 
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/CouchPotato
   cp -PR $BUILD/CouchPotato-*/* $ADDON_BUILD/$PKG_ADDON_ID/CouchPotato
+
+mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/CouchPotatoServer
+  cp -PR $BUILD/CouchPotatoServer-*/* $ADDON_BUILD/$PKG_ADDON_ID/CouchPotatoServer
 
 mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/Headphones
   cp -PR $BUILD/Headphones-*/* $ADDON_BUILD/$PKG_ADDON_ID/Headphones

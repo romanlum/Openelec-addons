@@ -19,19 +19,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="SickBeard-german"
-PKG_VERSION="614fd69"
+PKG_NAME="SickBeard-German"
+PKG_VERSION="004cb40"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="OSS"
-PKG_SITE="https://github.com/cytec/Sick-Beard"
-PKG_URL="https://nodeload.github.com/cytec/Sick-Beard/zipball/$PKG_VERSION"
+PKG_SITE="https://github.com/midgetspy/Sick-Beard"
+PKG_URL="$DISTRO_SRC/${PKG_NAME}-${PKG_VERSION}.tar.xz"
 PKG_DEPENDS="Python SABnzbd Cheetah"
 PKG_BUILD_DEPENDS="toolchain Python Cheetah"
 PKG_PRIORITY="optional"
 PKG_SECTION="service/downloadmanager"
-PKG_SHORTDESC="SickBeard: automated TV show downloading."
-PKG_LONGDESC="SickBeard: automated TV show downloading."
+PKG_SHORTDESC="SickBeard: automated TV show downloading. German Version"
+PKG_LONGDESC="SickBeard: automated TV show downloading. German Version"
 
 PKG_IS_ADDON="no"
 
