@@ -1,3 +1,6 @@
+3.0.3
+- update to SickBeard-German-c627fef (branch new_base)
+
 3.0.2
 - fix SickBeard-German-004cb40
 
