@@ -1,0 +1,6 @@
+3.0.1
+- First public release
+- update to SABnzbd-0.7.9
+- update to CouchPotatoServer-393c14d
+- update to Headphones-263272c
+- update to SickBeard-German-004cb40
