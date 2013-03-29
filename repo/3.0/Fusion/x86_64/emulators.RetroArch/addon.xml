@@ -17,6 +17,9 @@
     <description>
 Simple Multi-emulator frontend based on libretro
     </description>
+    <disclaimer>
+
+    </disclaimer>
     <platform>all</platform>
   </extension>
 </addon>

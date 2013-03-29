@@ -2,7 +2,7 @@
 <addons>
 <addon id="service.downloadmanager.SABnzbd-Suite-German"
        name="SABnzbd-Suite-German"
-       version="3.0.1"
+       version="3.0.4"
        provider-name="openelec.tv">
   <requires>
     <import addon="os.openelec.tv" version="3.0"/>
@@ -18,6 +18,9 @@
     <description>
 SABnzbd-Suite makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add a .nzb file. SABnzbd+ takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
     </description>
+    <disclaimer>
+
+    </disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
@@ -40,6 +43,9 @@ SABnzbd-Suite makes Usenet as simple and streamlined as possible by automating e
     <description>
 N64 emulator based on mupen64plus
     </description>
+    <disclaimer>
+
+    </disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
@@ -62,6 +68,9 @@ N64 emulator based on mupen64plus
     <description>
 Simple Multi-emulator frontend based on libretro
     </description>
+    <disclaimer>
+
+    </disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
